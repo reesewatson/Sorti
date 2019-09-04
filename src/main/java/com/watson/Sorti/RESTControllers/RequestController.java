@@ -26,8 +26,8 @@ public class RequestController {
                                                @RequestParam("response_url") String responseUrl) {
         SlackResponseModel response = new SlackResponseModel();
         response.setText("This is the response text");
-        //Response type "in-channel" is seen by everyone in the channel
-        //Response type "ephemeral" is seen only by user--also default setting if not manually set to "in-channel"
+        //Response type "in-channel" -- seen by everyone in the channel
+        //Response type "ephemeral" -- seen only by user -- also default setting if not manually set to "in-channel"
         response.setResponseType("ephemeral");
 
         Attachment attachment = new Attachment();
